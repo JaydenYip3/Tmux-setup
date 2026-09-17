@@ -1,0 +1,9 @@
+# ------------------------------------------------------------------------------
+# Oh my tmux! — local customization file
+# Overrides for ~/.tmux.conf (do not edit that file directly)
+# ------------------------------------------------------------------------------
+
+# Copy to the OS clipboard (pbcopy on macOS) in addition to the tmux buffer.
+# Rewrites every copy-selection/copy-pipe binding — so `y` in copy mode, mouse
+# drag-release, and friends all land in the system clipboard.
+tmux_conf_copy_to_os_clipboard=true
