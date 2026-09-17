@@ -7,3 +7,13 @@
 # Rewrites every copy-selection/copy-pipe binding — so `y` in copy mode, mouse
 # drag-release, and friends all land in the system clipboard.
 tmux_conf_copy_to_os_clipboard=true
+
+# Pane splits — mnemonic: the key looks like the divider it draws.
+#   |  \   new pane to the RIGHT  (vertical divider)
+#   _  -   new pane BELOW         (horizontal divider)
+# No -c "#{pane_current_path}" here on purpose: Oh my tmux! appends it via
+# tmux_conf_new_pane_retain_current_path when it rewrites these bindings.
+bind | split-window -h
+bind \\ split-window -h
+bind _ split-window -v
+bind - split-window -v
